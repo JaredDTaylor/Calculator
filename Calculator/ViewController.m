@@ -10,9 +10,26 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *txtNumber1;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtNumber2;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblAnswer;
+
 @end
 
 @implementation ViewController
+
+- (IBAction)click_Add:(id)sender {
+    NSString* number1 = [[self txtNumber1] text];
+    NSInteger integer1 = [number1 integerValue];
+    NSString* number2 = [[self txtNumber2] text];
+    NSInteger integer2 = [number2 integerValue];
+    NSInteger answer = integer1 + integer2;
+    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+    [[self lblAnswer] setText: answerString];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
