@@ -19,16 +19,41 @@
 @end
 
 @implementation ViewController
-
-- (IBAction)click_Add:(id)sender {
-    NSString* number1 = [[self txtNumber1] text];
+-(NSInteger) getInteger: (UITextField *)txt{
+    NSString* number1 = [txt text];
     NSInteger integer1 = [number1 integerValue];
-    NSString* number2 = [[self txtNumber2] text];
-    NSInteger integer2 = [number2 integerValue];
+    return integer1;
+}
+- (IBAction)click_Add:(id)sender {
+    NSInteger integer1 = [self getInteger: [self txtNumber1]];
+    NSInteger integer2 = [self getInteger: [self txtNumber2]];
     NSInteger answer = integer1 + integer2;
     NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
     [[self lblAnswer] setText: answerString];
 }
+- (IBAction)click_Subtract:(id)sender {
+    NSInteger integer1 = [self getInteger: [self txtNumber1]];
+    NSInteger integer2 = [self getInteger: [self txtNumber2]];
+    NSInteger answer = integer1 - integer2;
+    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+    [[self lblAnswer] setText: answerString];
+}
+- (IBAction)click_Multiply:(id)sender {
+    NSInteger integer1 = [self getInteger: [self txtNumber1]];
+    NSInteger integer2 = [self getInteger: [self txtNumber2]];
+    NSInteger answer = integer1 * integer2;
+    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+    [[self lblAnswer] setText: answerString];
+}
+- (IBAction)click_Divide:(id)sender {
+    NSInteger integer1 = [self getInteger: [self txtNumber1]];
+    NSInteger integer2 = [self getInteger: [self txtNumber2]];
+    NSInteger answer = integer1 / integer2;
+    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+    [[self lblAnswer] setText: answerString];
+}
+
+
 
 
 - (void)viewDidLoad {

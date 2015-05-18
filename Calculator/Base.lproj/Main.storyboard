@@ -27,7 +27,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdz-Ad-mo1">
-                                <rect key="frame" x="36" y="161" width="107" height="48"/>
+                                <rect key="frame" x="36" y="161" width="64" height="48"/>
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,8 +35,35 @@
                                     <action selector="click_Add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EbW-C5-jrJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3R-ei-y38">
+                                <rect key="frame" x="126" y="161" width="69" height="48"/>
+                                <state key="normal" title="Subtract">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_Subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKp-uZ-MVh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zba-q6-9nS">
+                                <rect key="frame" x="31" y="204" width="75" height="48"/>
+                                <state key="normal" title="Multiply">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_Multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xD4-Ik-o3v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-tK-uDP">
+                                <rect key="frame" x="120" y="204" width="75" height="48"/>
+                                <state key="normal" title="Divide">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click_Divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qr1-Ku-ySN"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgF-sZ-7Yh">
-                                <rect key="frame" x="36" y="245" width="201" height="52"/>
+                                <rect key="frame" x="36" y="260" width="201" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
