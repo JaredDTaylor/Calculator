@@ -24,33 +24,57 @@
     NSInteger integer1 = [number1 integerValue];
     return integer1;
 }
+-(bool) isValid: (NSString *) s{
+    NSCharacterSet* alphaNums = [NSCharacterSet decimalDigitCharacterSet];
+    NSCharacterSet* inStringSet = [NSCharacterSet characterSetWithCharactersInString: s];
+    return [alphaNums isSupersetOfSet:inStringSet];
+    
+}
+
+
 - (IBAction)click_Add:(id)sender {
-    NSInteger integer1 = [self getInteger: [self txtNumber1]];
-    NSInteger integer2 = [self getInteger: [self txtNumber2]];
-    NSInteger answer = integer1 + integer2;
-    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
-    [[self lblAnswer] setText: answerString];
+    if ([self isValid: [_txtNumber1 text]] && [self isValid: [_txtNumber2 text]]){
+        NSInteger integer1 = [self getInteger: [self txtNumber1]];
+        NSInteger integer2 = [self getInteger: [self txtNumber2]];
+        NSInteger answer = integer1 + integer2;
+        NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+        [[self lblAnswer] setText: answerString];
+    }else{
+        [[self lblAnswer] setText: @"Invalid Entry"];
+    }
 }
 - (IBAction)click_Subtract:(id)sender {
-    NSInteger integer1 = [self getInteger: [self txtNumber1]];
-    NSInteger integer2 = [self getInteger: [self txtNumber2]];
-    NSInteger answer = integer1 - integer2;
-    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
-    [[self lblAnswer] setText: answerString];
+    if ([self isValid: [_txtNumber1 text]] && [self isValid: [_txtNumber2 text]]){
+        NSInteger integer1 = [self getInteger: [self txtNumber1]];
+        NSInteger integer2 = [self getInteger: [self txtNumber2]];
+        NSInteger answer = integer1 - integer2;
+        NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+        [[self lblAnswer] setText: answerString];
+    }else{
+        [[self lblAnswer] setText: @"Invalid Entry"];
+    }
 }
 - (IBAction)click_Multiply:(id)sender {
-    NSInteger integer1 = [self getInteger: [self txtNumber1]];
-    NSInteger integer2 = [self getInteger: [self txtNumber2]];
-    NSInteger answer = integer1 * integer2;
-    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
-    [[self lblAnswer] setText: answerString];
+    if ([self isValid: [_txtNumber1 text]] && [self isValid: [_txtNumber2 text]]){
+        NSInteger integer1 = [self getInteger: [self txtNumber1]];
+        NSInteger integer2 = [self getInteger: [self txtNumber2]];
+        NSInteger answer = integer1 * integer2;
+        NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+        [[self lblAnswer] setText: answerString];
+    }else{
+        [[self lblAnswer] setText: @"Invalid Entry"];
+    }
 }
 - (IBAction)click_Divide:(id)sender {
-    NSInteger integer1 = [self getInteger: [self txtNumber1]];
-    NSInteger integer2 = [self getInteger: [self txtNumber2]];
-    NSInteger answer = integer1 / integer2;
-    NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
-    [[self lblAnswer] setText: answerString];
+    if ([self isValid: [_txtNumber1 text]] && [self isValid: [_txtNumber2 text]]){
+        NSInteger integer1 = [self getInteger: [self txtNumber1]];
+        NSInteger integer2 = [self getInteger: [self txtNumber2]];
+        NSInteger answer = integer1 / integer2;
+        NSString * answerString = [NSString stringWithFormat: @"%li", (long)answer];
+        [[self lblAnswer] setText: answerString];
+    }else{
+        [[self lblAnswer] setText: @"Invalid Entry"];
+    }
 }
 
 
